@@ -1,0 +1,61 @@
+
+
+
+
+.bestFootball,
+.bestHockey,
+.bestBasketball {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1em;
+}
+
+h1 {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(69, 140, 232, 0.71);}
+h2 {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(104, 229, 189, 0.71);
+    text-transform: uppercase;
+}
+
+
+figure{
+    padding: 10px;
+    background-color: #eee;
+    margin:  0;
+}
+
+details {
+    cursor: pointer;
+}
+
+p {
+    max-width: 350px;
+    text-align: justify;
+}
+h3 {
+    max-width: 350px;
+}
+img {
+    max-width: 350px;
+    height: auto;
+}
+
+@media screen and (max-width:1200px) {
+    .bestFootball,
+    .bestHockey,
+    .bestBasketball {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 800px) {
+    .bestFootball,
+    .bestHockey,
+    .bestBasketball {
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
