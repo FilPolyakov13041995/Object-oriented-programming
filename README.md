@@ -4,3 +4,7 @@
 * ### Inheritance
 * ### Polymorphism
 * ### Abstraction
+
+# Asynchrony
+* ### Fetch API
+* ### Json-server
