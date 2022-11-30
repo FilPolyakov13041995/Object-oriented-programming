@@ -1,0 +1,22 @@
+{
+  "name": "object-oriented-programming",
+  "version": "1.0.0",
+  "description": "OOP",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilPolyakov13041995/Object-oriented-programming.git"
+  },
+  "author": "Filipp Polyakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FilPolyakov13041995/Object-oriented-programming/issues"
+  },
+  "homepage": "https://github.com/FilPolyakov13041995/Object-oriented-programming#readme",
+  "devDependencies": {
+    "json-server": "^0.17.1"
+  }
+}
