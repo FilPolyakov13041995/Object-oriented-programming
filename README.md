@@ -7,4 +7,6 @@
 
 # Asynchrony
 * ### Fetch API
+  * #### GET
+  * #### POST
 * ### Json-server
