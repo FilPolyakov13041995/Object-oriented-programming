@@ -43,6 +43,8 @@ class Basketball extends Footballer {
 
 }
 
+
+
 const urlJsonFootball = 'http://localhost:3000/Footballer';
 const urlJsonHockey = 'http://localhost:3000/Hockey';
 const urlJsonBasketball = 'http://localhost:3000/Basketball';
@@ -56,13 +58,16 @@ function getRequest(url) {
         }
     });
 }
+
 getRequest(urlJsonFootball)
-    .then(data => {
-        data.forEach(({img, altimg, name, descr, date, playNumber, position}) => {
-            new Footballer(img, altimg, name, descr, date, playNumber, position, '.container .bestFootball').render(); 
-        });
-    })
-    .catch(err => console.log(err));
+.then(data => {
+    data.forEach(({img, altimg, name, descr, date, playNumber, position}) => {
+        new Footballer(img, altimg, name, descr, date, playNumber, position, '.container .bestFootball').render(); 
+    });
+})
+.catch(err => console.log(err));
+
+
 
 getRequest(urlJsonHockey)
     .then(data => {
@@ -79,10 +84,47 @@ getRequest(urlJsonBasketball)
         });
     })
     .catch(err => console.log(err));
+   
 
 
+const reformElem = document.getElementById('formElem');
+const urlAddress = 'http://localhost:3000/Request';
 
 
+function posts(method, url, obj) {
+    return fetch(url, {
+        method,
+        body: JSON.stringify(obj),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if(!response.ok) {
+            throw new Error('Что-то сломалось..Скоро починим..');
+        } else {
+            return response.json();
+        }
+    });
+}
+
+reformElem.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log('Отправка...');
+    
+    let formData = new FormData(reformElem);
+    const timeId = new Date();
+    formData.append('id', timeId.getMilliseconds() * timeId.getSeconds());
+      
+    let object = {};
+    formData.forEach((value, key) => {
+        object[key] = value;
+    });
+
+    posts('POST', urlAddress, object)
+        .then(data => console.log(data))
+        .catch(err => console.error(err));
+});
 
 
 //=========Fotball================//

@@ -45,6 +45,16 @@ img {
     height: auto;
 }
 
+form {
+    padding: 30px;
+}
+input {
+    height: 30px;
+}
+.btn {
+    height: 35px;
+}
+
 @media screen and (max-width:1200px) {
     .bestFootball,
     .bestHockey,
