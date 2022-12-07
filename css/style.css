@@ -21,6 +21,10 @@ h2 {
     background-color: rgba(104, 229, 189, 0.71);
     text-transform: uppercase;
 }
+h4 {
+    text-align: center;
+    font-size: 25px;
+}
 
 
 figure{
@@ -51,9 +55,11 @@ form {
     justify-content: center;
     padding: 30px;
     gap: 1em;
+    padding: 0;
 }
 input {
     height: 40px;
+    width: 250px;
     border: none;
     background-color: #eee;
     font-size: 18px;

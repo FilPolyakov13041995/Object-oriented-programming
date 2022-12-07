@@ -18,11 +18,18 @@
         <div class="bestBasketball"></div>
     </div>
 
-    <form id="formElem">
-        <input required placeholder="Введите полное имя" name="name" type="text">
-        <input required placeholder="Номер телефона" name="tel" type="text">
-        <button type="submit" class="btn">Отправить</button>
-    </form>
+    <div class="sportsmenForm">
+        <h4>Предложите нам спортсмена <br> на публикацию заполнив форму</h4>
+        <form id="formElem">
+            <input required placeholder="Введите полное имя игрока" name="name" type="text">
+            <input required placeholder="Вид спорта" name="view" type="text">
+            <input required placeholder="Дата рождения игрока" name="date" type="date">
+            <input required placeholder="Игровой номер" name="playNumber" type="number">
+            <input required placeholder="Позиция игрока" name="position" type="text">
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </div>
+    
 
     <script src="dist/oop.js"></script>
 </body>
